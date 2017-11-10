@@ -1,7 +1,9 @@
 <li>
+	<div class="card-panel white center-align">
 	{{burger_name}}
 
-	<button class="change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
-		{{#if devour}}Devour TIME!{{else}}eat-da-burger!{{/if}}
-	</button>
+	<div class="change-devour" data-id="{{id}}" data-newdevour="{{devour}}">
+		{{#if devour}}<button class="waves-effect waves-light btn">Devour TIME!</button>{{else}}<span></span>{{/if}}
+	</div>
+	</div>
 </li>

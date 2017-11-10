@@ -1,7 +1,6 @@
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
 }
 
 .label {
@@ -11,9 +10,28 @@ li {
 .create-update-form {
   padding: 5px;
   margin: 5px;
-  background: aqua;
 }
 
 .form-group {
   margin-bottom: 5px;
+  
+}
+
+body{
+ background-color: #F0E2B4;
+}
+
+.parallax-container {
+  min-height: 75vh;
+}
+
+#content_container{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 30px;
+  background-color: whitesmoke;
+}
+
+.card-panel{
+  height: 120px;
 }

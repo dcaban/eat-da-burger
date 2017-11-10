@@ -1,33 +1,72 @@
-<h1>Burgers!</h1>
 
-<h2>Burgers that are not devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devour=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>burgers that are devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devour=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+  <div class="parallax-container">
+    <div class="parallax"><img src="https://goo.gl/xM6EaK"></div>
+  </div>
+  <div class="section white">
+    <div class="row container">
+      <h2 class="header">Eat-Da-Burger</h2>
+      <p class="grey-text text-darken-3 lighten-3">It's Burger Eating Time.</p>
+    </div>
+  </div>
+      <div class="parallax-container">
+    <div class="parallax"><img src="https://goo.gl/aE1tvj"></div>
+    </div>
+    <div class="section white">
+    <div class="row container">
+      <h2 class="header">Add Burgers Then Eat Them</h2>
+      <p class="grey-text text-darken-3 lighten-3">Go Ahead Take A Byte.</p>
+    </div>
+    </div>
   </div>
 
+    
+  
 
-  <button type="submit">Add burger</button>
-</form>
+<div class="container" id="content_container">
+  <div class="row">
+    <div class="col s6 center-align">
+      <h4>Burgers that are not devoured!</h4>
+      <hr>
+
+      <ul>
+        {{#each burgers}}
+          {{#unless devoured}}
+            {{> burgers/burger-block devour=true}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+      </div>
+      
+      
+<div class="col s6 center-align">
+      <h4>Burgers that have been devoured!</h4>
+      <hr>
+
+      <ul>
+        {{#each burgers}}
+          {{#if devoured}}
+            {{> burgers/burger-block devour=false}}
+          {{/if}}
+        {{/each}}
+      </ul>
+      </div>
+      </div>
+      <div class="row">
+  <div class="col s8 offset-s2">
+      <h2>Add a Burger</h2>
+      <form class="create-form">
+
+        <div class="form-group">
+          <label for="ca">Burger Name:</label>
+          <input type="text" id="ca" name="name">
+        </div>
+
+
+        <button class="waves-effect waves-light btn" type="submit">Add burger</button>
+      </form>
+      </div>
+   </div>
+</div>
+  
+
+      </div>
