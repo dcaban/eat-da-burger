@@ -1,20 +1,20 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-  $(".change-sleep").on("click", function(event) {
+  $(".change-devour").on("click", function(event) {
     var id = $(this).data("id");
-    var newSleep = $(this).data("newsleep");
+    var newDevour = $(this).data("newdevour");
 
-    var newSleepState = {
-      sleepy: newSleep
+    var newDevourState = {
+      devoured: newDevour
     };
 
     // Send the PUT request.
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
-      data: newSleepState
+      data: newDevourState
     }).then(
       function() {
-        console.log("changed sleep to", newSleep);
+        console.log("changed devour to", newDevour);
         // Reload the page to get the updated list
         location.reload();
       }
@@ -25,20 +25,20 @@ $(function() {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
-    var newburger = {
-      name: $("#ca").val().trim(),
-      sleepy: $("[name=sleepy]:checked").val().trim()
+    var newBurger = {
+      burger_name: $("#ca").val().trim(),
+      devoured: 0
     };
 
     // Send the POST request.
     $.ajax("/api/burgers", {
       type: "POST",
-      data: newburger
+      data: newBurger
     }).then(
       function() {
         console.log("created new burger");
         // Reload the page to get the updated list
-        loburgerion.reload();
+        location.reload();
       }
     );
   });
